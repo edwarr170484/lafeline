@@ -1,0 +1,27 @@
+$black: #171616;
+$white: #ffffff;
+$gray: #171616;
+$transition: all 200ms linear;
+$font-family: 'Gilroy', sans-serif;
+$body-font-size: 20px;
+
+$container-max-width: 1310px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$grid-gutter-width: 30px;
+
+@mixin respond-to($breakpoint) {
+    @if map-has-key($grid-breakpoints, $breakpoint) {
+        @media (max-width: map-get($grid-breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.columns {
+    display: flex;
+    align-items: stretch;
+    gap: 64px;
+    margin-bottom: 60px;
+
+    &_socal {
+        padding-bottom: 23px;
+    }
+}
+
+.column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    &_pl {
+        padding-left: 22px;
+    }
+
+    &__padding {
+        padding-left: 30%;
+    }
+
+    &__header {
+        font-size: 55px;
+        line-height: 66px;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 25px;
+    }
+
+    &__button {
+        margin-top: 12px;
+
+        &_right {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: auto;
+        }
+    }
+
+    & img {
+        max-width: 100%;
+    }
+}

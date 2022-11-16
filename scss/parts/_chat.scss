@@ -1,0 +1,94 @@
+.chat {
+    &__header {
+        background: $black;
+        padding: 11px 26px 11px 69px;
+        @extend %flex-between-center;
+        color: $white;
+    }
+
+    &__user {
+        @extend %flex-start-center;
+    }
+
+    &__avatar {
+        position: relative;
+        margin-right: 37px;
+    }
+
+    &__online {
+        position: absolute;
+        bottom: 8px;
+        right: 5px;
+    }
+
+    &__title {
+        font-size: 55px;
+        line-height: 66px;
+        font-weight: 700;
+    }
+
+    &__contacts {
+        font-weight: 700;
+    }
+
+    &__inner {
+        background: rgba(226, 232, 228, 0.4);
+        padding: 25px 17px;
+        height: 653px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__messages-from {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__message-from {
+        max-width: 408px;
+        margin-bottom: 14px;
+        background: rgba(226, 232, 228, 0.2);
+        border: 1px solid rgba(23, 22, 22, 0.1);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 0px 50px 50px 30px;
+        color: $black;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 700;
+        padding: 40px 21px;
+    }
+
+    &__messages-to {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__message-to {
+        padding: 39px 89px;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(23, 22, 22, 0.1);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 0px 50px 50px 30px;
+        max-width: 590px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & input {
+            border: none;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 56px;
+            background: none;
+            width: 413px;
+            font-family: $font-family;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

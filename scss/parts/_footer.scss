@@ -1,0 +1,94 @@
+.footer {
+    background: $black;
+    color: $white;
+    padding: 22px 0;
+
+    & a {
+        color: $white;
+    }
+
+    &__info {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+
+        &_center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &_right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        & p {
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
+    }
+
+    &__slogan {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &__email {
+        margin-top: auto;
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        & ul {
+            @extend %flex-center;
+
+            & li {
+                & a {
+                    display: block;
+                    margin-right: 27px;
+
+                    & img {
+                        max-width: 32px;
+                    }
+                }
+
+                &:last-child a {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__politics {
+        margin-top: auto !important;
+    }
+
+    &__contacts {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__payments {
+        display: flex;
+        gap: 10px;
+        padding: 27px 0;
+
+        & img {
+            max-width: 59px;
+        }
+    }
+}
