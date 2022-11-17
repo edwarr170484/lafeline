@@ -55,4 +55,50 @@
         z-index: 2;
         right: 0;
     }
+
+    &_service-1 {
+        background: url('../images/service-1/main-banner.jpg') 0 0 no-repeat;
+        background-size: cover;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &_service-2 {
+        background: url('../images/service-2/main-banner.jpg') 0 0 no-repeat;
+        background-size: cover;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &_service-3 {
+        background: url('../images/service-3/main-banner.jpg') 0 0 no-repeat;
+        background-size: cover;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &_service-4 {
+        background: url('../images/service-4/main-banner.jpg') 0 0 no-repeat;
+        background-size: cover;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &__button {
+        margin-top: auto;
+        margin-bottom: 30px;
+
+        & button {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid $black;
+        }
+    }
 }

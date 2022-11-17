@@ -1,0 +1,136 @@
+.attendances {
+    padding-top: 60px;
+
+    &__header {
+        margin-bottom: 25px;
+
+        & h1 {
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 74px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 26px;
+
+        &_service-1 {
+            & .attendances__item:nth-child(1) .attendances__title {
+                bottom: 303px;
+            }
+
+            & .attendances__item:nth-child(2) .attendances__title {
+                top: 35px;
+            }
+
+            & .attendances__item:nth-child(3) .attendances__title {
+                bottom: 62px;
+            }
+
+            & .attendances__item:nth-child(4) .attendances__title {
+                top: 50px;
+            }
+        }
+
+        &_service-2 {
+            & .attendances__item:nth-child(1) .attendances__title {
+                top: 110px;
+            }
+
+            & .attendances__item:nth-child(2) .attendances__title {
+                bottom: 73px;
+            }
+
+            & .attendances__item:nth-child(3) .attendances__title {
+                top: 276px;
+            }
+
+            & .attendances__item:nth-child(4) .attendances__title {
+                bottom: 151px;
+            }
+        }
+
+        &_service-3 {
+            & .attendances__item:nth-child(1) .attendances__title {
+                top: 28px;
+            }
+
+            & .attendances__item:nth-child(2) .attendances__title {
+                bottom: 239px;
+            }
+
+            & .attendances__item:nth-child(3) .attendances__title {
+                bottom: 39px;
+            }
+
+            & .attendances__item:nth-child(4) .attendances__title {
+                top: 160px;
+            }
+        }
+
+        &_service-4 {
+            & .attendances__item:nth-child(1) .attendances__title {
+                bottom: 38px;
+            }
+
+            & .attendances__item:nth-child(2) .attendances__title {
+                bottom: 268px;
+            }
+
+            & .attendances__item:nth-child(3) .attendances__title {
+                bottom: 132px;
+            }
+
+            & .attendances__item:nth-child(4) .attendances__title {
+                top: 48px;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(226, 232, 228, 0.4);
+            z-index: 1;
+            opacity: 1;
+            transition: $transition;
+        }
+
+        &:hover {
+            &:before {
+                opacity: 0;
+            }
+
+            & h2 {
+                color: $white;
+                text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        & img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        left: 10px;
+        z-index: 3;
+
+        & h2 {
+            font-weight: 400;
+            font-size: 55px;
+            line-height: 64px;
+        }
+    }
+}
