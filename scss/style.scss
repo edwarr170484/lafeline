@@ -9,7 +9,13 @@
 @import './parts/button';
 @import './parts/chat';
 @import './parts/attendances';
+@import './parts/modal';
+@import './parts/form';
 @import './parts/footer';
+
+* {
+    box-sizing: border-box;
+}
 
 html,
 body {
