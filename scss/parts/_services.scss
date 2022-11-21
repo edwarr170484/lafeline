@@ -1,6 +1,10 @@
 .services {
     padding-bottom: 60px;
 
+    @include respond-to(md) {
+        padding-bottom: 20px;
+    }
+
     &__header {
         margin-bottom: 50px;
 
@@ -16,18 +20,19 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 80px;
+
+        @include respond-to(md) {
+            gap: 20px;
+        }
     }
 
     &__block {
         position: relative;
-        height: 600px;
+
+
 
         & img {
             max-width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
 
         & a {
@@ -53,6 +58,16 @@
         line-height: 56px;
         z-index: 2;
 
+        @include respond-to(md) {
+            font-size: 24px;
+            line-height: 27px;
+        }
+
+        @include respond-to(sm) {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
         &_bottom-left {
             bottom: 71px;
             left: 33px;
@@ -74,5 +89,9 @@
         font-size: 24px;
         line-height: 28px;
         padding-left: 57%;
+
+        @include respond-to(lg) {
+            padding-left: 45%;
+        }
     }
 }

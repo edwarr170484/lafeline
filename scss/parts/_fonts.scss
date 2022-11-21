@@ -27,3 +27,45 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@mixin font($pcSize, $ipSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $pcSize +$mobSize * .7;
+
+    @media (max-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 375px) / #{$maxWidth}));
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: #{$ipSize + px};
+    }
+
+    @media (min-width: 1025px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+
+    @media (min-width: #{$maxWidth + px}) {
+        font-size: #{$pcSize + px};
+    }
+}
+
+@mixin font($pcSize, $ipSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $pcSize +$mobSize * .7;
+
+    @media (max-width: 767px) {
+        line-height: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 375px) / #{$maxWidth}));
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        line-height: #{$ipSize + px};
+    }
+
+    @media (min-width: 1025px) {
+        line-height: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+
+    @media (min-width: #{$maxWidth + px}) {
+        line-height: #{$pcSize + px};
+    }
+}

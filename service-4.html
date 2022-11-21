@@ -14,7 +14,9 @@
         <div class="container">
             <nav class="header">
                 <div class="brand">
-                    <div class="logotype">La <strong>Feline</strong></div>
+                    <div class="logotype">
+                        <a href="/">La <strong>Feline</strong></a>
+                    </div>
                     <button class="header__toggler" onclick="toogleMenu(event)">
                         <img src="images/icons/hamburger.svg" alt="" />
                     </button>
@@ -34,8 +36,9 @@
                 </div>
                 <div class="header__menu">
                     <ul>
-                        <li><a href=""><strong>Inscription</strong> en ligne</a></li>
-                        <li><a href=""><strong>Boutique</strong> en ligne</a></li>
+                        <li class="mobile__show"><a href="tel:111111111"><img src="images/icons/phone.svg" /></a></li>
+                        <li class="mobile__hide"><a href=""><strong>Inscription</strong> en ligne</a></li>
+                        <li class="mobile__hide"><a href=""><strong>Boutique</strong> en ligne</a></li>
                     </ul>
                 </div>
                 <div class="header__socials">
@@ -52,7 +55,7 @@
             <div class="main-banner main-banner_service-4">
                 <div class="container">
                     <div class="main-banner__button">
-                        <button class="button">Inscrire</button>
+                        <button class="button" data-toggle="modal">Inscrire</button>
                     </div>
                 </div>
             </div>
@@ -151,7 +154,172 @@
                 </div>
             </div>
         </div>
+        <div class="container container_mobile">
+            <div class="footer__row">
+                <div class="footer__column">
+                    <div class="footer__slogan"><strong>Salon de cosmétologie esthétique</strong></div>
+                    <div class="logotype logotype_footer">La <strong>Feline</strong></div>
+                </div>
+                <div class="footer__column">
+                    <div class="footer__contacts">
+                        <p class="text-center">
+                            Rue Léon Bernus, 68<br />
+                            6000 Charleroi<br />
+                            +32 497 61.66.26
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <div class="footer__email"><a href="mailto:info@lafeline.be">info@lafeline.be</a></div>
+                    <div class="footer__socials">
+                        <ul>
+                            <li><a href=""><img src="images/icons/youtube.svg" alt="Youtube" /></a></li>
+                            <li><a href=""><img src="images/icons/telegram.svg" alt="Telegram" /></a></li>
+                            <li><a href=""><img src="images/icons/instagram.svg" alt="Instagram" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="footer__column">
+                    <p>Siége sociale:<br />
+                        SRL, FB soins à dominicile<br />
+                        Rue du Campinaire, 213<br />
+                        6250 Pont - de- Loup<br />
+                        Numéro d’entreprise: 0845491194</p>
+                    <p class="footer__politics"><a href="">Politique de confidentialité</a></p>
+                </div>
+                <div class="footer__column">
+                    <div class="footer__payments">
+                        <img src="images/icons/mastercard.svg" alt="Mastercart" />
+                        <img src="images/icons/visa.svg" alt="Visa" />
+                        <img src="images/icons/maestro.svg" alt="Maestro" />
+                        <img src="images/icons/bancontact.svg" alt="Bancontact" />
+                    </div>
+                    <div class="footer__copyright text-right">
+                        <p>Copiright © 2022 - DKMX OÜ - Eesti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__header text-center">
+                Reservation en ligne
+            </div>
+            <div class="modal__body">
+                <div class="form__group">
+                    <div class="form__image">
+                        <div class="form__image-inner">
+                            <!--<div class="form__image-text text-center">Télécharger une photo</div>
+                                        <div class="form__image-icon">
+                                            <img src="images/icons/circle-plus.svg" alt="" />
+                                        </div>-->
+                            <img src="images/main.jpg" alt="" />
+                        </div>
+                        <input type="file" name="avatar">
+                    </div>
+                    <div class="form__controls">
+                        <div class="form__control">
+                            <input type="text" name="name" placeholder="Nom, Prénom*" required class="form__field">
+                        </div>
+                        <div class="form__control">
+                            <input type="text" name="birthday" placeholder="Date de naissance*" required
+                                class="form__field">
+                        </div>
+                        <div class="form__control">
+                            <input type="text" name="phone" placeholder="Numéro de téléphone*" required
+                                class="form__field">
+                        </div>
+                    </div>
+                </div>
+                <div class="form__control">
+                    <input type="email" name="email" placeholder="Email*" required class="form__field">
+                </div>
+                <div class="form__select">
+                    <div class="form__field form__field-label">Choisissez une prestation
+                    </div>
+                    <div class="form__select-options">
+                        <div class="form__select-option form__select-option_plus" data-option="1">
+                            <span>Massages du corps, 70€</span>
+                        </div>
+                        <div class="form__select-option form__select-option_check" data-option="2">
+                            <span>Massages du corps, 70€</span>
+                        </div>
+                    </div>
+                    <input type="hidden">
+                </div>
+                <div class="form__row">
+                    <div class="form__select form__select_calendar">
+                        <div class="form__field form__field-label">Sélecteur de date*</div>
+                        <div class="form__select-options">
+                            <div class="form__select-option" data-option="1">
+                                <span>20.12.2022</span>
+                            </div>
+                            <div class="form__select-option" data-option="2">
+                                <span>21.12.2022</span>
+                            </div>
+                        </div>
+                        <input type="hidden">
+                    </div>
+                    <div class="form__select form__select_clock">
+                        <div class="form__field form__field-label">Choisissez une heure*</div>
+                        <div class="form__select-options">
+                            <div class="form__select-option" data-option="1">
+                                <span>10.00-11.00</span>
+                            </div>
+                            <div class="form__select-option" data-option="2">
+                                <span>11.00-12.00</span>
+                            </div>
+                        </div>
+                        <input type="hidden">
+                    </div>
+                </div>
+                <div class=" form__control">
+                    <label class="form__label">Quelle sont vos attentes des produits que vous comptez
+                        d'acheter?</label>
+                    <input type="text" name="response" placeholder="Entrez votre réponse*" required class="form__field">
+                </div>
+                <div class="form__control">
+                    <label class="form__label">Quelle sont vos habitudes quotidiens pour nettoyer, soigner la
+                        peau,
+                        citez SVP?</label>
+                    <input type="text" name="email" placeholder="Entrez votre réponse*" required class="form__field">
+                </div>
+                <div class="form__control">
+                    <label class="form__label">Êtes - vous sous un traitement médicamenteux, les allergies
+                        connus?</label>
+                    <input type="text" name="email" placeholder="Entrez votre réponse*" required class="form__field">
+                </div>
+                <div class="form__control">
+                    <label class="form__label">Exposition au soleil régulièr?</label>
+                    <input type="text" name="email" placeholder="Entrez votre réponse*" required class="form__field">
+                </div>
+                <div class="form__control">
+                    <label class="form__label">Le/Les photos de vos produits cosmétiques afin d'adapter/ajouter
+                        où
+                        changer le soin de votre peau pour satisfaire vos attentes
+                        (vois question n°1)?</label>
+                    <input type="text" name="email" placeholder="Entrez votre réponse*" required class="form__field">
+                </div>
+                <div class="form__control form__control_margin-small">
+                    <textarea name="email" placeholder="Commentaire" class="form__field"></textarea>
+                </div>
+                <div class="form__control form__control_margin-small">
+                    <div class="form__checkbox">
+                        <input type="checkbox" id="happy" name="happy" value="yes">
+                        <label for="happy">J'accepte le traitement des données personnelles*</label>
+                    </div>
+                </div>
+                <div class="form__buttons">
+                    <button type="submit" class="form__button">Annulation</button>
+                    <button type="button" class="form__button form__button_cancel">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
 </body>
 

@@ -12,6 +12,20 @@
     line-height: 24px;
     transition: $transition;
 
+    @include respond-to(md) {
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @include respond-to(sm) {
+        width: 60px;
+        height: 60px;
+        font-size: 9px;
+        line-height: 11px;
+    }
+
     &:hover,
     &:focus {
         background: $black;
@@ -23,4 +37,8 @@
 .button-group {
     display: flex;
     gap: 17px;
+
+    @include respond-to(md) {
+        margin-top: 13px;
+    }
 }

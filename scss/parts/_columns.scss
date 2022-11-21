@@ -7,6 +7,13 @@
     &_socal {
         padding-bottom: 23px;
     }
+
+    @include respond-to(md) {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        margin-bottom: 20px;
+    }
 }
 
 .column {
@@ -14,17 +21,41 @@
     display: flex;
     flex-direction: column;
 
+    @include respond-to(md) {
+        width: 100%;
+    }
+
     &_pl {
         padding-left: 22px;
     }
 
     &__padding {
         padding-left: 30%;
+
+        @include respond-to(xl) {
+            padding-left: 0;
+        }
     }
 
     &__header {
         font-size: 55px;
         line-height: 66px;
+
+        @include respond-to(lg) {
+            font-size: 45px;
+            line-height: 56px;
+        }
+
+        @include respond-to(md) {
+            font-size: 30px;
+            line-height: 34px;
+            padding-top: 20px;
+        }
+
+        @include respond-to(sm) {
+            font-size: 24px;
+            line-height: 29px;
+        }
     }
 
     &__buttons {

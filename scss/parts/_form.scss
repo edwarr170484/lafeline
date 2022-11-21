@@ -6,6 +6,10 @@
     margin-bottom: 49px;
     position: relative;
 
+    @include respond-to(md) {
+        margin-bottom: 15px;
+    }
+
     &_margin-small {
         margin-bottom: 25px;
     }
@@ -22,6 +26,12 @@
     font-weight: 500;
     font-size: 36px;
     line-height: 42px;
+
+    @include respond-to(md) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
     position: relative;
 
     &:focus {
@@ -30,6 +40,8 @@
 
     &-label {
         color: rgba(23, 22, 22, 0.3);
+        overflow: hidden;
+        word-wrap: normal;
 
         &_selected {
             color: $black;
@@ -39,6 +51,10 @@
 
 .form__group {
     display: flex;
+
+    @include respond-to(md) {
+        display: block;
+    }
 }
 
 .form__image {
@@ -48,6 +64,12 @@
     border-radius: 30px;
     margin-right: 50px;
     position: relative;
+
+    @include respond-to(md) {
+        margin-bottom: 15px;
+        width: 130px;
+        height: 130px;
+    }
 
     & input[type="file"] {
         opacity: 0;
@@ -85,6 +107,38 @@
         line-height: 42px;
         color: $black;
         margin-bottom: 34px;
+
+        @include respond-to(md) {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-icon {
+        & svg {
+            @include respond-to(md) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &-empty {
+        @extend %flex-center;
+        flex-direction: column;
+
+        &_hide {
+            display: none !important;
+        }
+    }
+
+    &-avatar {
+        display: block;
+
+        &_show {
+            display: block;
+        }
     }
 }
 
@@ -92,6 +146,13 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 38px;
+
+    @include respond-to(md) {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+
     color: $white;
     display: block;
     margin-bottom: 25px;
@@ -113,6 +174,12 @@
             font-weight: 500;
             font-size: 32px;
             line-height: 38px;
+
+            @include respond-to(md) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
             color: $white;
 
             &::before {
@@ -124,7 +191,17 @@
                 flex-grow: 0;
                 border: 1.5px solid $white;
                 border-radius: 10px;
+
+                @include respond-to(md) {
+                    border-radius: 4px;
+                }
+
                 margin-right: 18px;
+
+                @include respond-to(md) {
+                    margin-right: 11px;
+                }
+
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: 50% 50%;
@@ -146,6 +223,12 @@
     font-weight: 500;
     font-size: 36px;
     line-height: 42px;
+
+    @include respond-to(md) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
     cursor: pointer;
     transition: $transition;
 
@@ -162,16 +245,29 @@
 .form__buttons {
     @extend %flex-center;
     gap: 132px;
+
+    @include respond-to(md) {
+        gap: 15px;
+    }
 }
 
 .form__row {
     display: flex;
     gap: 70px;
+
+    @media(max-width:1170px) {
+        display: block;
+    }
 }
 
 .form__select {
     position: relative;
     margin-bottom: 49px;
+
+    @include respond-to(md) {
+        margin-bottom: 15px;
+    }
+
     flex-grow: 1;
 
     &_opened {
@@ -205,6 +301,10 @@
         &:after {
             background: url('../images/icons/date.svg') 50% 50% no-repeat;
         }
+
+        @media(max-width:1170px) {
+            width: 100%;
+        }
     }
 
     &_clock {
@@ -212,6 +312,10 @@
 
         &:after {
             background: url('../images/icons/time.svg') 50% 50% no-repeat;
+        }
+
+        @media(max-width:1170px) {
+            width: 100%;
         }
     }
 
@@ -234,6 +338,13 @@
         font-weight: 500;
         font-size: 36px;
         line-height: 42px;
+
+        @include respond-to(md) {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+
         margin-bottom: 20px;
         cursor: pointer;
         position: relative;

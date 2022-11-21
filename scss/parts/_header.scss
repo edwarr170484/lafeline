@@ -12,6 +12,10 @@ header {
     max-width: 928px;
     display: flex;
 
+    @include respond-to(xl) {
+        max-width: 100%;
+    }
+
     &__toggler {
         border: none;
         background: none;
@@ -27,13 +31,25 @@ header {
         width: 457px;
         flex-shrink: 0;
 
+        @include respond-to(md) {
+            margin-right: 22px;
+        }
+
+        @include respond-to(lg) {
+            width: auto;
+        }
+
         & ul {
-            @extend %flex-between-center;
+            @extend %flex-end-center;
 
             & li {
                 & a {
                     display: block;
                     padding: 20px 28px;
+
+                    @include respond-to(md) {
+                        padding: 13px 22px;
+                    }
 
                     &.header__menu-link {
                         &_border {
@@ -45,6 +61,11 @@ header {
 
             & li:first-child a {
                 border-right: 2px solid rgba(23, 22, 22, 0.3);
+                border-left: 2px solid rgba(23, 22, 22, 0.3);
+
+                @include respond-to(md) {
+                    border-right: none;
+                }
             }
         }
     }
@@ -58,6 +79,19 @@ header {
             & li {
                 & a {
                     margin-right: 19px;
+
+                    @include respond-to(md) {
+                        margin-right: 22px;
+                    }
+
+                }
+            }
+
+            @include respond-to(md) {
+                & li:last-child {
+                    & a {
+                        margin-right: 0;
+                    }
                 }
             }
         }
@@ -99,12 +133,20 @@ header {
 }
 
 .brand {
-    border-right: 2px solid rgba(23, 22, 22, 0.3);
     @extend %flex-between-center;
     position: relative;
     padding-right: 34px;
     width: 338px;
     flex-shrink: 0;
+
+    @include respond-to(md) {
+        padding-right: 26px;
+    }
+
+    @include respond-to(xl) {
+        flex-grow: 1;
+        width: auto;
+    }
 }
 
 .logotype {
@@ -115,5 +157,20 @@ header {
         color: $white;
         font-size: 48px;
         line-height: 56px;
+
+        @include respond-to(md) {
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+
+    & a {
+        color: $black;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
     }
 }
