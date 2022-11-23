@@ -248,6 +248,7 @@
 
     @include respond-to(md) {
         gap: 15px;
+        flex-wrap: wrap;
     }
 }
 
@@ -293,6 +294,15 @@
         background: url('../images/icons/chack.svg') 50% 50% no-repeat;
         display: block;
         cursor: pointer;
+
+        @include respond-to(md){
+            background-size:40px 40px;
+        }
+
+        @include respond-to(sm){
+            background-size:20px 20px;
+            right: 12px;
+        }
     }
 
     &_calendar {
@@ -300,6 +310,15 @@
 
         &:after {
             background: url('../images/icons/date.svg') 50% 50% no-repeat;
+
+            @include respond-to(md){
+                background-size:40px 40px;
+            }
+    
+            @include respond-to(sm){
+                background-size:20px 20px;
+                right: 12px;
+            }
         }
 
         @media(max-width:1170px) {
@@ -312,6 +331,15 @@
 
         &:after {
             background: url('../images/icons/time.svg') 50% 50% no-repeat;
+
+            @include respond-to(md){
+                background-size:40px 40px;
+            }
+    
+            @include respond-to(sm){
+                background-size:20px 20px;
+                right: 12px;
+            }
         }
 
         @media(max-width:1170px) {

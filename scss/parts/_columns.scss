@@ -13,6 +13,7 @@
         justify-content: flex-start;
         margin-bottom: 0;
         margin-bottom: 20px;
+        gap: 20px;
     }
 }
 
@@ -70,10 +71,27 @@
         font-size: 20px;
         line-height: 24px;
         padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+
+        @include respond-to(md){
+            flex-direction: row;
+        }
+
+        &.text-right{
+            @include respond-to(md){
+                flex-direction: row-reverse;
+            }
+        }
     }
 
     &__button {
         margin-top: 12px;
+        
+        @include respond-to(md){
+            margin-left: 19px;
+            margin-right: 19px;
+        }
 
         &_right {
             display: flex;

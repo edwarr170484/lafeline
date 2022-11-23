@@ -67,6 +67,11 @@ header {
                     border-right: none;
                 }
             }
+
+            & li:nth-child(2) a {
+                border-right: 2px solid rgba(23, 22, 22, 0.3);
+                border-left: 2px solid rgba(23, 22, 22, 0.3);
+            }
         }
     }
 
@@ -139,19 +144,24 @@ header {
     width: 338px;
     flex-shrink: 0;
 
-    @include respond-to(md) {
-        padding-right: 26px;
-    }
-
     @include respond-to(xl) {
         flex-grow: 1;
         width: auto;
+    }
+
+    @include respond-to(md) {
+        padding-right: 26px;
     }
 }
 
 .logotype {
     font-size: 40px;
     line-height: 48px;
+
+    @include respond-to(sm) {
+        font-size: 24px;
+        line-height: 29px;
+    }
 
     &_footer {
         color: $white;

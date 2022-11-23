@@ -102,6 +102,17 @@
         background: url('../images/service-1/main-banner.jpg') 0 0 no-repeat;
         background-size: cover;
 
+        @include respond-to(md) {
+            background: url('../images/service-1/main-banner.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+
+        & .container{
+            @include respond-to(md) {
+                justify-content: flex-start;
+            }
+        }
+
         &:before {
             display: none;
         }
@@ -110,6 +121,12 @@
     &_service-2 {
         background: url('../images/service-2/main-banner.jpg') 0 0 no-repeat;
         background-size: cover;
+
+        & .container{
+            @include respond-to(md) {
+                justify-content: flex-start;
+            }
+        }
 
         &:before {
             display: none;
@@ -120,6 +137,17 @@
         background: url('../images/service-3/main-banner.jpg') 0 0 no-repeat;
         background-size: cover;
 
+        @include respond-to(md) {
+            background: url('../images/service-3/main-banner.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+
+        & .container{
+            @include respond-to(md) {
+                justify-content: flex-start;
+            }
+        }
+
         &:before {
             display: none;
         }
@@ -128,6 +156,17 @@
     &_service-4 {
         background: url('../images/service-4/main-banner.jpg') 0 0 no-repeat;
         background-size: cover;
+
+        @include respond-to(md) {
+            background: url('../images/service-4/main-banner.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+
+        & .container{
+            @include respond-to(md) {
+                justify-content: flex-start;
+            }
+        }
 
         &:before {
             display: none;
