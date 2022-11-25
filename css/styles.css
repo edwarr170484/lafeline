@@ -2082,6 +2082,10 @@ body.modal_opened {
   overflow: hidden;
 }
 
+.content {
+  padding-top: 70px;
+}
+
 strong,
 b {
   font-weight: 700;
