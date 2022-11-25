@@ -25,6 +25,8 @@
             @include respond-to(sm) {
                 font-size: 8px;
                 line-height: 10px;
+                max-width: 360px;
+                margin: 0 auto;
             }
         }
     }

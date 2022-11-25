@@ -30,7 +30,7 @@
 
 @mixin font($pcSize, $ipSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
-    $addMobSize: $pcSize +$mobSize * .7;
+    $addMobSize: $pcSize + $mobSize * 0.7;
 
     @media (max-width: 767px) {
         font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 375px) / #{$maxWidth}));
@@ -51,7 +51,7 @@
 
 @mixin font($pcSize, $ipSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
-    $addMobSize: $pcSize +$mobSize * .7;
+    $addMobSize: $pcSize + $mobSize * 0.7;
 
     @media (max-width: 767px) {
         line-height: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 375px) / #{$maxWidth}));

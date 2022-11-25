@@ -18,7 +18,9 @@
                         <a href="/">La <strong>Feline</strong></a>
                     </div>
                     <button class="header__toggler" onclick="toogleMenu(event)">
-                        <img src="images/icons/hamburger.svg" alt="" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
                     <div class="header__dropdown-menu">
                         <ul>
@@ -32,6 +34,17 @@
                             <li><a href="">contact</a></li>
                             <li><a href="">blogs et actualités</a></li>
                         </ul>
+                        <div class="dropdown__mobile-btns mobile__show">
+                            <a href=""><strong>Inscription</strong> en ligne</a>
+                            <a href=""><strong>Boutique</strong> en ligne</a>
+                        </div>
+                        <div class="dropdown__contacts-links mobile__show">
+                            <ul>
+                                <li><a href=""><img src="images/icons/telegram-black.svg" alt="Telegram" /></a></li>
+                                <li><a href=""><img src="images/icons/whatsapp.svg" alt="Whatsapp" /></a></li>
+                                <li><a href=""><img src="images/icons/instagram-black.svg" alt="Instagram" /></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="header__menu">
@@ -56,7 +69,8 @@
                 <div class="container">
                     <div class="main-banner__text">
                         <h1 class="text-right">
-                            Un monde de la beauté <br /><strong>régi par des experts</strong><br /> et une technologie
+                            Un monde de la <br />beauté <br /><strong>régi par des experts</strong><br /> et une
+                            technologie<br />
                             <strong>moderne</strong>
                         </h1>
                         <div class="main-banner__slogan">Salon de cosmétologie esthétique</div>
@@ -82,7 +96,7 @@
                     </div>
                     <div class="services__blocks">
                         <div class="services__block">
-                            <img src="images/services/service-1.png" alt="Beauté du visage" /></a>
+                            <img src="images/services/service-1.png" alt="Beauté du visage" />
                             <div class="services__name services__name_bottom-left">Beauté
                                 du<br /><strong>visage</strong>
                             </div>
@@ -114,10 +128,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="services__description mobile__hide">
-                    <p>Nos cosmétologues tiendront compte de toutes les caractéristiques individuelles et
-                        sélectionneront des méthodes efficaces garantissant des résultats à long terme.</p>
-                </div>
             </div>
         </div>
         <div class="container">
@@ -128,6 +138,10 @@
                     </div>
                 </div>
                 <div class="column column__buttons">
+                    <div class="services__description">
+                        <p>Nos cosmétologues tiendront compte de toutes les caractéristiques individuelles et
+                            sélectionneront des méthodes efficaces garantissant des résultats à long terme.</p>
+                    </div>
                     <div class="button-group">
                         <a href="" class="button">Avis</a>
                         <a href="" class="button">Instagram</a>
@@ -143,38 +157,68 @@
                         <div class="column__header text-right">
                             <strong>symbiose entre sciences et</strong> expérience de professionnelle
                         </div>
-                        <div class="column__text text-right">
-                            <p>Grâce au travail de spécialistes hautement qualifiés et d'équipements cosmétologie
-                                innovants,
-                                nous aidons à nos clients à maintenir leur jeunesse, leur beauté et leur santé</p>
-
+                        <div class="column__padding">
+                            <div class="column__text text-right">
+                                <p>Grâce au travail de spécialistes hautement qualifiés et d'équipements cosmétologie
+                                    innovants,
+                                    nous aidons à nos clients à maintenir leur jeunesse, leur beauté et leur santé</p>
+                            </div>
                             <div class="column__button">
                                 <a href="" class="button">Philosophie</a>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="columns">
                 <div class="column order-md-2">
                     <div class="column__header">
-                        <strong>approche holistique</strong>des soins personnels
+                        <strong>approche holistique </strong>des soins personnels
                     </div>
-                    <div class="column__text">
-                        <p>Notre boutique en ligne présente des produits de marques cosmétiques qui permettront de
-                        prolonger l'effet des procédures et de fournir des soins quotidiens compétents. Vous trouverez
-                        ici les meilleurs produits pour le visage, le corps, les mains et pieds, les cheveux et le cuir
-                        chevelu avec des formules ultra efficaces.<strong>Les consultants La Feline - boutique,
-                            professionnels by cosmétologues et trichologues professionnels vous aideront à choisir le
-                            bon produit.</strong></p>
-
-                            <div class="column__button column__button_right">
+                    <div class="mobile__hide">
+                        <div class="column__text">
+                            <p>Notre boutique en ligne présente des produits de marques cosmétiques qui permettront de
+                                prolonger l'effet des procédures et de fournir des soins quotidiens compétents. Vous
+                                trouverez
+                                ici les meilleurs produits pour le visage, le corps, les mains et pieds, les cheveux et
+                                le
+                                cuir
+                                chevelu avec des formules ultra efficaces.<strong><br />Les consultants La Feline -
+                                    boutique,
+                                    professionnels by cosmétologues et trichologues professionnels vous aideront à
+                                    choisir
+                                    le
+                                    bon produit.</strong></p>
+                        </div>
+                        <div class="column__button column__button_right">
+                            <a href="" class="button">Boutique</a>
+                        </div>
+                    </div>
+                    <div class="column__padding mobile__show">
+                        <div class="column__text">
+                            <p>Notre boutique en ligne présente des produits de marques cosmétiques qui permettront de
+                                prolonger<br /> l'effet des procédures et de fournir des soins quotidiens compétents.
+                                Vous
+                                trouverez
+                                ici les meilleurs produits pour le visage, le corps, les mains et pieds, les cheveux et
+                                le
+                                cuir
+                                chevelu avec des formules ultra efficaces.
+                            <div>
                                 <a href="" class="button">Boutique</a>
                             </div>
+                            <strong>Les consultants La Feline -
+                                boutique,
+                                professionnels by cosmétologues et trichologues professionnels vous aideront à
+                                choisir
+                                le
+                                bon produit.</strong>
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="column column_pl order-md-1">
+                <div class="column order-md-1">
                     <img src="images/column-2.png" alt="" />
                 </div>
             </div>
@@ -189,24 +233,31 @@
                         </div>
                         <div class="chat__title">Inscription en-ligne</div>
                     </div>
-                    <div class="chat__contacts mobile__hide">
+                    <div class="chat__contacts">
                         <div class="chat__username text-right">CHARLEROI, BELIQUE</div>
                         <div class="chat__usetphone text-right">+ 32 497 61.67.26</div>
                     </div>
                 </div>
                 <div class="chat__inner">
-                    <div class="chat__messages-from">
-                        <div class="chat__message-from">Bonjour, je m’appelle Fatima!</div>
-                        <div class="chat__message-from">Je répondrai à toutes vos questions et prendrai rendez-vous pour
-                            la procédure. 🙂</div>
-                        <div class="chat__message-from">Veuillez entrer votre numéro de téléphone dans le formulaire
-                            ci-dessous.</div>
-                    </div>
-                    <div class="chat__messages-to">
-                        <div class="chat__message-to">
-                            <form action="" method="POST">
-                                <input type="text" name="conact-phone" placeholder="+ 32 (___) __-__-__" />
-                            </form>
+                    <div>
+                        <div class="chat__wrapper">
+                            <div class="chat__messages-from">
+                                <div class="chat__message-from">Bonjour, je m’appelle Fatima!</div>
+                                <div class="chat__message-from">Je répondrai à toutes vos questions et prendrai
+                                    rendez-vous
+                                    pour
+                                    la procédure. 🙂</div>
+                                <div class="chat__message-from">Veuillez entrer votre numéro de téléphone dans le
+                                    formulaire
+                                    ci-dessous.</div>
+                            </div>
+                            <div class="chat__messages-to">
+                                <div class="chat__message-to">
+                                    <form action="" method="POST">
+                                        <input type="text" name="conact-phone" placeholder="+ 32 (___) __-__-__" />
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -10,21 +10,53 @@
             font-size: 24px;
             line-height: 29px;
         }
+
+        @include respond-to(sm) {
+            flex-direction: column;
+            padding: 0
+        }
     }
 
     &__user {
         @extend %flex-start-center;
+
+        @include respond-to(sm) {
+            padding: 10px 0;
+        }
     }
 
     &__avatar {
         position: relative;
         margin-right: 37px;
+
+        @include respond-to(sm) {
+            height: 49px;
+            width: 49px;
+            margin-right: 20px;
+
+            img {
+                &:first-child {
+                    width: 49px;
+                    height: 49px;
+                }
+
+                &:last-child {
+                    width: 9px;
+                    height: 9px;
+                }
+            }
+        }
     }
 
     &__online {
         position: absolute;
         bottom: 8px;
         right: 5px;
+
+        @include respond-to(sm) {
+            bottom: 4px;
+            right: 3px;
+        }
     }
 
     &__title {
@@ -45,24 +77,56 @@
 
     &__contacts {
         font-weight: 700;
+
+        @include respond-to(sm) {
+            width: 100%;
+            background: #fff;
+            color: #000;
+            padding: 8px 0;
+
+            * {
+                max-width: 360px;
+                margin: auto;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
     }
 
     &__inner {
         background: rgba(226, 232, 228, 0.4);
         padding: 25px 17px;
-        height: 653px;
+        min-height: 653px;
         display: flex;
         flex-direction: column;
+
+        @include respond-to(sm) {
+            min-height: 262px;
+            padding: 10px 0;
+
+            .chat__wrapper {
+                max-width: 360px;
+                margin: 0 auto;
+            }
+        }
     }
 
     &__messages-from {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        max-width: 408px;
+
+        @include respond-to(sm) {
+            max-width: 187px;
+        }
     }
 
     &__message-from {
-        max-width: 408px;
+        display: flex;
+        align-items: center;
+        min-height: 99px;
+        width: 100%;
         margin-bottom: 14px;
         background: rgba(226, 232, 228, 0.2);
         border: 1px solid rgba(23, 22, 22, 0.1);
@@ -72,11 +136,16 @@
         font-size: 16px;
         line-height: 19px;
         font-weight: 700;
-        padding: 40px 21px;
+        padding: 0 21px;
 
         @include respond-to(md) {
             padding: 17px 10px;
-            padding-right: 51px;
+        }
+
+        @include respond-to(sm) {
+            font-size: 8px;
+            line-height: 10px;
+            min-height: 45px;
         }
     }
 
@@ -115,6 +184,10 @@
             font-size: 48px;
             line-height: 56px;
 
+            &::placeholder {
+                color: #171616;
+            }
+
             @include respond-to(md) {
                 font-size: 30px;
                 line-height: 33px;
@@ -123,7 +196,7 @@
 
             @include respond-to(sm) {
                 font-size: 20px;
-                line-height: 23px;
+                line-height: 22px;
             }
 
             background: none;

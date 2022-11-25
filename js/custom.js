@@ -1,10 +1,13 @@
 function toogleMenu(event) {
     event.stopPropagation();
     let menu = document.getElementsByClassName('header__dropdown-menu')[0];
+    let toggler = document.querySelector('.header__toggler');
 
     if (menu.classList.contains('opened')) {
+        toggler.classList.remove('opened');
         menu.classList.remove('opened');
     } else {
+        toggler.classList.add('opened');
         menu.classList.add('opened');
     }
 }

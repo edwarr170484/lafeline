@@ -1,7 +1,7 @@
 header {
     background: $white;
-    padding: 10px 0;
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 5;
 }
 
@@ -16,17 +16,60 @@ header {
         max-width: 100%;
     }
 
+    @include respond-to(sm) {
+        max-width: 360px;
+    }
+
     &__toggler {
         border: none;
         background: none;
-        width: 28px;
-        height: 28px;
+        width: 70px;
+        height: 70px;
         @extend %flex-center;
+        padding: 0;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        transition: all 0.2s;
+
+        span {
+            display: block;
+            width: 19px;
+            height: 2px;
+            background: #171616;
+            border-radius: 90px;
+            margin-bottom: 5px;
+            transition: all 0.2s;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &.opened {
+            background: #171616;
+
+            span {
+                background: #fff;
+
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate(5px, -5px);
+                }
+            }
+        }
     }
 
     &__menu {
-        border-right: 2px solid rgba(23, 22, 22, 0.3);
+        border-right: 1px solid rgba(23, 22, 22, 0.3);
         margin-right: 27px;
         width: 457px;
         flex-shrink: 0;
@@ -40,28 +83,29 @@ header {
         }
 
         & ul {
-            @extend %flex-end-center;
+            display: flex;
+            align-items: center;
 
             & li {
                 & a {
                     display: block;
-                    padding: 20px 28px;
+                    padding: 22px 28px;
 
                     @include respond-to(md) {
-                        padding: 13px 22px;
+                        padding: 22px;
                     }
 
                     &.header__menu-link {
                         &_border {
-                            border-right: 2px solid rgba(23, 22, 22, 0.3);
+                            border-right: 1px solid rgba(23, 22, 22, 0.3);
                         }
                     }
                 }
             }
 
             & li:first-child a {
-                border-right: 2px solid rgba(23, 22, 22, 0.3);
-                border-left: 2px solid rgba(23, 22, 22, 0.3);
+                border-right: 1px solid rgba(23, 22, 22, 0.3);
+                border-left: 1px solid rgba(23, 22, 22, 0.3);
 
                 @include respond-to(md) {
                     border-right: none;
@@ -69,8 +113,8 @@ header {
             }
 
             & li:nth-child(2) a {
-                border-right: 2px solid rgba(23, 22, 22, 0.3);
-                border-left: 2px solid rgba(23, 22, 22, 0.3);
+                border-right: 1px solid rgba(23, 22, 22, 0.3);
+                border-left: 1px solid rgba(23, 22, 22, 0.3);
             }
         }
     }
@@ -123,15 +167,77 @@ header {
             z-index: 1;
         }
 
+        & ul li {
+            margin-bottom: 6px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include respond-to(sm) {
+                &:last-child {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
         & ul li a {
             line-height: 24px;
-            margin-bottom: 6px;
             display: block;
-            border-bottom: 1px solid transparent;
+            border-bottom: 1px solid #f2f2f2;
 
             &:hover,
             &:focus {
                 border-bottom: 1px solid $black;
+            }
+        }
+
+        @include respond-to(sm) {
+
+            ul {
+                max-width: 360px;
+                margin: auto;
+            }
+
+            .dropdown__mobile-btns {
+                display: flex;
+                justify-content: space-between;
+                margin: auto;
+                margin-bottom: 30px;
+                max-width: 360px;
+
+                a {
+                    display: block;
+                    border: 1px solid #f2f2f2;
+                    padding: 15px;
+
+                    &:hover {
+                        border: 1px solid #171616;
+                    }
+                }
+            }
+
+            .dropdown__contacts-links {
+                display: flex;
+                justify-content: center;
+
+                ul {
+                    display: flex;
+                    gap: 30px;
+
+                    a {
+                        border: none;
+
+                        &:hover {
+                            border: none;
+                        }
+
+
+                        img {
+                            height: 25px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -140,7 +246,6 @@ header {
 .brand {
     @extend %flex-between-center;
     position: relative;
-    padding-right: 34px;
     width: 338px;
     flex-shrink: 0;
 
@@ -149,8 +254,8 @@ header {
         width: auto;
     }
 
-    @include respond-to(md) {
-        padding-right: 26px;
+    @include respond-to(sm) {
+        position: inherit;
     }
 }
 

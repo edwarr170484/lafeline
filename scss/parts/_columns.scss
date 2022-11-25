@@ -1,11 +1,142 @@
 .columns {
     display: flex;
     align-items: stretch;
+    justify-content: space-between;
     gap: 64px;
     margin-bottom: 60px;
 
     &_socal {
-        padding-bottom: 23px;
+        align-items: flex-end;
+
+        @include respond-to(sm) {
+            align-items: flex-start;
+            max-width: 360px;
+            margin: 0 auto;
+        }
+    }
+
+    .column {
+        &:first-child {
+            max-width: 646px;
+
+            .column__header {
+                max-width: 100%;
+            }
+
+            @include respond-to(sm) {
+                .column__header {
+                    max-width: 310px;
+                }
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        .column {
+            width: calc(50% - 40px);
+
+            &__button {
+                align-self: flex-start;
+            }
+
+            @include respond-to(sm) {
+                width: 100%;
+
+                &__header {
+                    margin-bottom: 13px;
+                }
+            }
+
+            img {
+                border-radius: 50% 0 50% 0;
+            }
+
+            @include respond-to(sm) {
+                &:first-child {
+                    padding: 0;
+                }
+
+                &__button {
+                    align-self: flex-end;
+                    margin: 0;
+                }
+
+                &__text {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+
+                img {
+                    height: 216px;
+                    border-radius: 0;
+                }
+
+                &:last-child {
+                    max-width: 360px;
+                    margin: 0 auto;
+                }
+            }
+
+
+        }
+    }
+
+    &:nth-child(3) {
+        .column {
+            &__header {
+                max-width: 528px;
+            }
+
+            &__text {
+                max-width: 580px;
+                margin-bottom: 14px;
+            }
+
+            @include respond-to(sm) {
+                width: 100%;
+            }
+
+            img {
+                border-radius: 50% 0 0 50%;
+            }
+
+            @include respond-to(sm) {
+                .column__padding {
+                    align-items: flex-start;
+                    flex-direction: row;
+                }
+
+                &.order-md-2 {
+                    align-items: flex-end;
+                    max-width: 360px;
+                    margin: 0 auto;
+                }
+
+                &__header {
+                    max-width: 227px;
+                    margin-bottom: 13px;
+                }
+
+                &__text {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+
+                &__button {
+                    align-self: flex-end;
+                    margin: 0;
+                }
+
+                &:last-child {
+                    padding: 0;
+                }
+
+                img {
+                    height: 216px;
+                    border-radius: 0;
+                }
+            }
+        }
     }
 
     @include respond-to(md) {
@@ -15,10 +146,10 @@
         margin-bottom: 20px;
         gap: 20px;
     }
+
 }
 
 .column {
-    width: 50%;
     display: flex;
     flex-direction: column;
 
@@ -31,16 +162,27 @@
     }
 
     &__padding {
-        padding-left: 30%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
-        @include respond-to(xl) {
-            padding-left: 0;
+        @include respond-to(sm) {
+            align-items: flex-start;
+
+            .column__padding {
+                flex-direction: row-reverse;
+                align-items: flex-end;
+
+            }
         }
     }
 
     &__header {
         font-size: 55px;
         line-height: 66px;
+        max-width: 454px;
+        font-weight: 500;
 
         @include respond-to(lg) {
             font-size: 45px;
@@ -54,12 +196,16 @@
         }
 
         @include respond-to(sm) {
+            max-width: 278px;
             font-size: 24px;
             line-height: 29px;
+            padding: 0;
+            text-align: left !important;
         }
     }
 
     &__buttons {
+        padding-bottom: 40px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -67,6 +213,7 @@
     }
 
     &__text {
+        max-width: 383px;
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
@@ -74,12 +221,27 @@
         display: flex;
         flex-direction: column;
 
-        @include respond-to(md){
+        @include respond-to(md) {
             flex-direction: row;
         }
 
-        &.text-right{
-            @include respond-to(md){
+        @include respond-to(sm) {
+            padding: 0;
+            display: block;
+            max-width: 326px;
+
+            p {
+                max-width: 321px;
+            }
+
+            >div {
+                float: right;
+                margin-left: 30px;
+            }
+        }
+
+        &.text-right {
+            @include respond-to(md) {
                 flex-direction: row-reverse;
             }
         }
@@ -87,8 +249,8 @@
 
     &__button {
         margin-top: 12px;
-        
-        @include respond-to(md){
+
+        @include respond-to(md) {
             margin-left: 19px;
             margin-right: 19px;
         }
@@ -102,5 +264,7 @@
 
     & img {
         max-width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

@@ -41,4 +41,8 @@
     @include respond-to(md) {
         margin-top: 13px;
     }
+
+    @include respond-to(sm) {
+        margin: 0;
+    }
 }
