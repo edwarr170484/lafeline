@@ -96,12 +96,10 @@
     &__inner {
         background: rgba(226, 232, 228, 0.4);
         padding: 25px 17px;
-        min-height: 653px;
         display: flex;
         flex-direction: column;
 
         @include respond-to(sm) {
-            min-height: 262px;
             padding: 10px 0;
 
             .chat__wrapper {
@@ -119,6 +117,19 @@
 
         @include respond-to(sm) {
             max-width: 187px;
+        }
+    }
+
+    .to-reveal {
+        display: none;
+        width: 100%;
+    }
+
+    .consultation__chat-message--fit-content {
+        display: none;
+        max-width: max-content;
+        .chat__message-from {
+            padding: 0 50px;
         }
     }
 
@@ -157,6 +168,7 @@
     }
 
     &__message-to {
+        display: none;
         padding: 39px 89px;
 
         @include respond-to(md) {
@@ -174,7 +186,6 @@
             max-width: 375px;
         }
 
-        display: flex;
         justify-content: center;
         align-items: center;
 

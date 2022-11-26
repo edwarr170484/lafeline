@@ -1,3 +1,30 @@
+$(document).scroll('scroll', function is_shown() {
+    const chat = document.querySelector('.chat__inner');
+    let wt = $(window).scrollTop();
+    let wh = $(window).height();
+    let eh = $('.chat__inner').outerHeight();
+    let et = $('.chat__inner').offset().top;
+
+    if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh) && !chat.classList.contains('active')) {
+        chat.classList.add('active');
+
+        $('.consultation__chat-message--fit-content').fadeIn();
+
+        setTimeout(() => {
+            $('.consultation__chat-message--fit-content').fadeOut(200, function() {
+                $('.chat__messages-from div:eq(0)').fadeIn(200, function () {
+                    $(this).next().fadeIn(500, arguments.callee);
+                });
+            });
+        }, 1000);
+        setTimeout(() => {
+            $('.chat__message-to').fadeIn();
+        }, 2400);
+    } else {
+        return false;
+    }
+});
+
 function toogleMenu(event) {
     event.stopPropagation();
     let menu = document.getElementsByClassName('header__dropdown-menu')[0];

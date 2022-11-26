@@ -309,7 +309,6 @@ header {
   flex-direction: column;
   align-items: flex-end;
   padding-top: 4px;
-  padding-left: 60%;
   position: relative;
   z-index: 3;
 }
@@ -344,7 +343,7 @@ header {
 .main-banner__slogan {
   font-weight: 700;
   margin-top: auto;
-  padding-right: 48px;
+  font-size: 34px;
 }
 @media (max-width: 768px) {
   .main-banner__slogan {
@@ -1022,13 +1021,11 @@ header {
 .chat__inner {
   background: rgba(226, 232, 228, 0.4);
   padding: 25px 17px;
-  min-height: 653px;
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 576px) {
   .chat__inner {
-    min-height: 262px;
     padding: 10px 0;
   }
   .chat__inner .chat__wrapper {
@@ -1046,6 +1043,17 @@ header {
   .chat__messages-from {
     max-width: 187px;
   }
+}
+.chat .to-reveal {
+  display: none;
+  width: 100%;
+}
+.chat .consultation__chat-message--fit-content {
+  display: none;
+  max-width: max-content;
+}
+.chat .consultation__chat-message--fit-content .chat__message-from {
+  padding: 0 50px;
 }
 .chat__message-from {
   display: flex;
@@ -1082,13 +1090,13 @@ header {
   align-items: flex-end;
 }
 .chat__message-to {
+  display: none;
   padding: 39px 89px;
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(23, 22, 22, 0.1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
   border-radius: 0px 50px 50px 30px;
   max-width: 590px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -1996,7 +2004,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
 }
 .footer__socials ul li a {
@@ -2060,6 +2068,7 @@ header {
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,

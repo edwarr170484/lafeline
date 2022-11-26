@@ -37,7 +37,6 @@
         flex-direction: column;
         align-items: flex-end;
         padding-top: 4px;
-        padding-left: 60%;
         position: relative;
         z-index: 3;
 
@@ -70,7 +69,7 @@
     &__slogan {
         font-weight: 700;
         margin-top: auto;
-        padding-right: 48px;
+        font-size: 34px;
 
         @include respond-to(md) {
             font-weight: 700;
