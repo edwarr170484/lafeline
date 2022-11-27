@@ -40,6 +40,21 @@ body {
 
 .content {
     padding-top: 70px;
+
+    &_absolute {
+        height: calc(100vh - 265px);
+    }
+}
+
+.message {
+    height: 100%;
+    padding-top: 150px;
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
 }
 
 strong,

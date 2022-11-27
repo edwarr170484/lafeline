@@ -128,6 +128,7 @@
     .consultation__chat-message--fit-content {
         display: none;
         max-width: max-content;
+
         .chat__message-from {
             padding: 0 50px;
         }
@@ -170,6 +171,9 @@
     &__message-to {
         display: none;
         padding: 39px 89px;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 56px;
 
         @include respond-to(md) {
             padding: 13px 21px;
