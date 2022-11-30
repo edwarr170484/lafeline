@@ -38,6 +38,20 @@
                 </div>
             </div>
         </div>
+		<div class="about-section">
+            <div class="container">
+                <div class="about about_service">
+                    <p>Ut odio nulla dolore tation iriure delenit molestie dolor nisl quis minim commodo tincidunt
+                        blandit consequat. ea adipiscing vel wisi et vel aliquam dolore lobortis facilisis iusto ipsum
+                        accumsan illum qui at nibh dolor dignissim consectetuer te nonummy praesent eros enim euismod
+                        Lorem ut vero hendrerit elit, eu exerci nostrud erat sit ut Duis autem volutpat. feugait sed
+                        vulputate duis aliquip amet, luptatum velit ex laoreet augue feugiat dolore et zzril magna in
+                        consequat, facilisi. in ullamcorper nulla esse eum veniam, suscipit diam ad</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut</p>
+                </div>
+            </div>
+        </div>
         <?php the_content(); ?>
     </div>
 <?php get_footer(); ?>

@@ -295,13 +295,13 @@
         display: block;
         cursor: pointer;
 
-        @include respond-to(md){
-            background-size:40px 40px;
+        @include respond-to(md) {
+            background-size: 40px 40px;
         }
 
-        @include respond-to(sm){
-            background-size:20px 20px;
-            right: 12px;
+        @include respond-to(sm) {
+            background-size: 20px 20px !important;
+            right: 12px !important;
         }
     }
 
@@ -311,13 +311,13 @@
         &:after {
             background: url('../images/icons/date.svg') 50% 50% no-repeat;
 
-            @include respond-to(md){
-                background-size:40px 40px;
+            @include respond-to(md) {
+                background-size: 40px 40px;
             }
-    
-            @include respond-to(sm){
-                background-size:20px 20px;
-                right: 12px;
+
+            @include respond-to(sm) {
+                background-size: 20px 20px !important;
+                right: 12px !important;
             }
         }
 
@@ -332,13 +332,13 @@
         &:after {
             background: url('../images/icons/time.svg') 50% 50% no-repeat;
 
-            @include respond-to(md){
-                background-size:40px 40px;
+            @include respond-to(md) {
+                background-size: 40px 40px;
             }
-    
-            @include respond-to(sm){
-                background-size:20px 20px;
-                right: 12px;
+
+            @include respond-to(sm) {
+                background-size: 20px 20px !important;
+                right: 12px !important;
             }
         }
 
@@ -379,6 +379,11 @@
         padding-left: 40px;
         padding-right: 40px;
 
+        @include respond-to(sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         & span {
             border-bottom: 2px solid transparent;
         }
@@ -399,6 +404,11 @@
             height: 37px;
             display: block;
             cursor: pointer;
+
+            @include respond-to(sm) {
+                background-size: 20px 20px !important;
+                right: 12px !important;
+            }
         }
 
         &_plus {

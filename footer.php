@@ -5,13 +5,9 @@
                     <div class="footer__slogan"><strong>Salon de cosmétologie esthétique</strong></div>
                     <div class="logotype logotype_footer">La <strong>Feline</strong></div>
                     <div class="footer__socials">
-                        <ul>
-                            <li><a href=""><img src="<?php echo esc_url( get_theme_file_uri('/images/icons/youtube.svg') ); ?>" alt="Youtube" /></a></li>
-                            <li><a href=""><img src="<?php echo esc_url( get_theme_file_uri('/images/icons/telegram.svg') ); ?>" alt="Telegram" /></a></li>
-                            <li><a href=""><img src="<?php echo esc_url( get_theme_file_uri('/images/icons/instagram.svg') ); ?>" alt="Instagram" /></a></li>
-                        </ul>
+						<?php wp_nav_menu(['menu' => 'Socials footer menu']);?>
                     </div>
-                    <div class="footer__email"><a href="mailto:info@lafeline.be">info@lafelline.be</a></div>
+                    <div class="footer__email"><a href="mailto:<?php echo get_option('admin_email');?>"><?php echo get_option('admin_email');?></a></div>
                 </div>
                 <div class="footer__column footer__column_center">
                     <p class="text-center">Siége sociale:<br />
@@ -19,7 +15,7 @@
                         Rue du Campinaire, 213<br />
                         6250 Pont - de- Loup<br />
                         Numéro d’entreprise: 0845491194</p>
-                    <p class="footer__politics text-center"><a href="">Politique de confidentialité</a></p>
+                    <p class="footer__politics text-center"><a href="/politique-de-confidentialite">Politique de confidentialité</a></p>
                 </div>
                 <div class="footer__column footer__column_right">
                     <div class="footer__contacts">
@@ -57,13 +53,9 @@
                     </div>
                 </div>
                 <div class="footer__column">
-                    <div class="footer__email"><a href="mailto:info@lafeline.be">info@lafelline.be</a></div>
+                    <div class="footer__email"><a href="mailto:<?php echo get_option('admin_email');?>"><?php echo get_option('admin_email');?></a></div>
                     <div class="footer__socials">
-                        <ul>
-                            <li><a href=""><img src="<?php echo esc_url( get_theme_file_uri('/images/icons/youtube.svg') ); ?>" alt="Youtube" /></a></li>
-                            <li><a href=""><img src="<?php echo esc_url( get_theme_file_uri('/images/icons/telegram.svg') ); ?>" alt="Telegram" /></a></li>
-                            <li><a href=""><img src="<?php echo esc_url( get_theme_file_uri('/images/icons/instagram.svg') ); ?>" alt="Instagram" /></a></li>
-                        </ul>
+                        <?php wp_nav_menu(['menu' => 'Socials footer menu']);?>
                     </div>
                 </div>
             </div>
@@ -74,7 +66,7 @@
                         Rue du Campinaire, 213<br />
                         6250 Pont - de- Loup<br />
                         Numéro d’entreprise: 0845491194</p>
-                    <p class="footer__politics"><a href="">Politique de confidentialité</a></p>
+                    <p class="footer__politics"><a href="/politique-de-confidentialite">Politique de confidentialité</a></p>
                 </div>
                 <div class="footer__column">
                     <div class="footer__payments">

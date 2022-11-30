@@ -75,7 +75,7 @@ $(document).ready(function () {
         $(this).toggleClass('form__select_opened');
     });
 
-    $('button[data-toggle="modal"]').on('click', function () {
+    $('*[data-toggle="modal"]').on('click', function () {
         openModal();
     });
 
@@ -105,7 +105,7 @@ function sendPhone(phone) {
     callData.append('action', 'send_call_email');
     callData.append('phone', phone);
 
-    if (phone.length == 9) {
+    if (phone.length >= 9) {
         $.ajax({
             url: front_script.ajaxurl,
             data: callData,
